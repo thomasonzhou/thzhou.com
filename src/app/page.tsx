@@ -1,9 +1,9 @@
-import { DisplayGraph } from "@/components/graph";
+import SkillGraph from "@/components/skillGraph";
 
 export default function Home() {
     return (
         <main>
-            <DisplayGraph />
+            <SkillGraph />
         </main>
     );
 }
