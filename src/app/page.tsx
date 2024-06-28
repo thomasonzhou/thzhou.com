@@ -1,8 +1,9 @@
+import { DisplayGraph } from "@/components/graph";
 
 export default function Home() {
-  return (
-    <main>
-      
-    </main>
-  );
+    return (
+        <main>
+            <DisplayGraph />
+        </main>
+    );
 }
