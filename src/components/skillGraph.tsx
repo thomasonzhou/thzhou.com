@@ -18,4 +18,5 @@ const SkillGraph = ({}) => {
         />
     );
 };
+
 export default SkillGraph;
