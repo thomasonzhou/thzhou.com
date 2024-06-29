@@ -5,7 +5,7 @@ const Loading = ({}) => {
     const messageCount = loadingMessages.length;
     const messageIndex = Math.floor(Math.random() * messageCount);
     return (
-        <div className="h-screen w-screen flex flex-col items-center justify-center">
+        <div className="h-screen w-screen flex flex-col items-center justify-center bg-black text-white">
             <p>The code is loading</p>
             <p>{loadingMessages[messageIndex]}</p>
         </div>

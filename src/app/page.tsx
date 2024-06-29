@@ -10,7 +10,7 @@ const DynamicSkillGraph = dynamic(() => import("../components/skillGraph"), {
 
 export default function Home() {
     return (
-        <main>
+        <main className="bg-black">
             <DynamicSkillGraph />
         </main>
     );
