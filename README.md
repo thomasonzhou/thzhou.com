@@ -16,10 +16,10 @@ npm run dev
 
 Open a new tab in [http://localhost:3000](http://localhost:3000/) to see the website.
 
-# website roadmap
+# website roadmap -> inspiration
 
 - [x] Clean up boilerplate
 - [x] Skill graph
-- [ ] Loading screen
+- [X] Loading screen -> Discord, Chrome Dino
 - [ ] External links to projects and interesting sites
 
