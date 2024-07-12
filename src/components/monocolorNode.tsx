@@ -1,9 +1,12 @@
-import { skillNode } from "@/data/skillNodes";
+import { node } from "@/data/skillNodes";
 import SpriteText from "three-spritetext";
 
-const MonocolorNode = (node: skillNode, textheight: number) => {
+const MonocolorNode = (node: node, textheight: number) => {
     const sprite = new SpriteText(node.nodeVal);
-    sprite.color = node.colors[0];
+
+    if (node.colors.length > 0) {
+        sprite.color = node.colors[0];
+    }
     sprite.textHeight = textheight;
     return sprite;
 };

@@ -1,5 +1,5 @@
 "use client";
-import { skillData, skillNode, skillLink } from "@/data/skillNodes";
+import { skillData, node, link } from "@/data/skillNodes";
 import { ForceGraph3D } from "react-force-graph";
 import SpriteText from "three-spritetext";
 import SplitColorNode from "./splitColorNode";
@@ -11,7 +11,7 @@ const SkillGraph = ({}) => {
         <ForceGraph3D
             graphData={skillData}
             nodeAutoColorBy="group"
-            nodeThreeObject={(node: skillNode) => {
+            nodeThreeObject={(node: node) => {
                 if (node.colors.length === 2 && node.splitIndex) {
                     return SplitColorNode(
                         node,
@@ -21,6 +21,11 @@ const SkillGraph = ({}) => {
                     );
                 }
                 return MonocolorNode(node, TEXTHEIGHT);
+            }}
+            onNodeClick={(node: node) => {
+                if (node.link !== undefined) {
+                    window.open(node.link, "_blank");
+                }
             }}
             linkOpacity={0.5}
         />
