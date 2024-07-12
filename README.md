@@ -21,5 +21,7 @@ Open a new tab in [http://localhost:3000](http://localhost:3000/) to see the web
 - [x] Clean up boilerplate
 - [x] Skill graph
 - [X] Loading screen -> Discord, Chrome Dino
-- [ ] External links to projects and interesting sites
+- [ ] Graph edges display connecting technologies on hover
+- [ ] Color nodes based on Github colors
+- [ ] External links to Github, linkedin and favorite sites
 
