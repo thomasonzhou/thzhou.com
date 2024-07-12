@@ -23,8 +23,8 @@ const SkillGraph = ({}) => {
                 return MonocolorNode(node, TEXTHEIGHT);
             }}
             onNodeClick={(node: node) => {
-                if (node.link !== undefined) {
-                    window.open(node.link, "_blank");
+                if (node.url !== undefined) {
+                    window.open(node.url, "_blank");
                 }
             }}
             linkOpacity={0.5}

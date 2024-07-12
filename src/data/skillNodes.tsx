@@ -3,7 +3,7 @@ export type node = {
     nodeVal: string;
     splitIndex?: number; // define with two colors
     colors: string[];
-    link: string;
+    url: string;
 };
 
 export type link = {
@@ -21,56 +21,56 @@ export const skillData: {
             id: 0,
             nodeVal: "C",
             colors: ["#232ca1"],
-            link: "https://github.com/thomasonzhou/dino-run-nds",
+            url: "https://github.com/thomasonzhou/dino-run-nds",
         },
         {
             id: 1,
             nodeVal: "C++",
             colors: ["#5E97D0"],
-            link: "https://www.learncpp.com/",
+            url: "https://www.learncpp.com/",
         },
         {
             id: 2,
             nodeVal: "Docker",
             colors: ["#1D63ED"], //https://www.docker.com/company/newsroom/media-resources/
-            link: "https://devopswithdocker.com/",
+            url: "https://devopswithdocker.com/",
         },
         {
             id: 3,
             nodeVal: "Go",
             colors: ["#00ADD8"], //https://go.dev/blog/go-brand -> Brand Book
-            link: "https://github.com/thomasonzhou/go-tdd",
+            url: "https://github.com/thomasonzhou/go-tdd",
         },
         {
             id: 4,
             nodeVal: "PostgreSQL",
             colors: ["#336791"], //https://wiki.postgresql.org/wiki/Color_Palette
-            link: "https://www.postgresql.org/docs/current/tutorial.html",
+            url: "https://www.postgresql.org/docs/current/tutorial.html",
         },
         {
             id: 5,
             nodeVal: "Python",
             colors: ["#4584b6", "#ffde57"], //https://www.python.org/community/logos/
             splitIndex: 2,
-            link: "https://docs.python.org/3/tutorial/index.html",
+            url: "https://docs.python.org/3/tutorial/index.html",
         },
         {
             id: 6,
             nodeVal: "TypeScript",
             colors: ["#3178c6"], //https://www.typescriptlang.org/branding/
-            link: "https://github.com/thomasonzhou/thzhou.com",
+            url: "https://github.com/thomasonzhou/thzhou.com",
         },
         {
             id: 7,
             nodeVal: "Linkedin",
             colors: ["#0a66c2"], //https://brand.linkedin.com/downloads
-            link: "https://www.linkedin.com/in/thomasonzhou/",
+            url: "https://www.linkedin.com/in/thomasonzhou/",
         },
         {
             id: 8,
             nodeVal: "GitHub",
             colors: ["#FFFFFF"], //https://github.com/logos
-            link: "https://github.com/thomasonzhou/",
+            url: "https://github.com/thomasonzhou/",
         },
     ],
     links: [
