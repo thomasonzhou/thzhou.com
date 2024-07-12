@@ -1,43 +1,26 @@
-/* modification of three-spritetext, adds 2 color split
-there are some "useless" values that were left to resemble the original code
-e.g. border and stroke width of 0
-*/
-
+// modification of three-spritetext, adds 2 color split
+// fallback to monocolor
 import { SpriteMaterial, Sprite, CanvasTexture } from "three";
 import { skillNode } from "@/data/skillNodes";
+import MonocolorNode from "@/components/monocolorNode";
 
 const SplitColorNode = (
     node: skillNode,
     splitIndex: number,
-    color1: string,
-    color2: string,
+    colors: string[],
     textHeight: number
 ) => {
     const text = node.nodeVal;
-    if (splitIndex >= text.length) return null;
+    const [color1, color2] = colors;
+    if (splitIndex >= text.length) return MonocolorNode(node, textHeight);
 
-    const borderWidth = 0;
-    const borderColor = "white";
-    const strokeWidth = 0;
-    const strokeColor = "white";
     const fontFace = "system-ui";
     const fontSize = 90;
     const fontWeight = "normal";
     const canvas = document.createElement("canvas");
 
-    const fontSizeScale = (prop: number) => prop * fontSize * 0.1;
-
-    const border = [borderWidth, borderWidth];
-    const relBorder = border.map(fontSizeScale);
-
-    const borderRadius = [0, 0];
-    const relBorderRadius = borderRadius.map(fontSizeScale);
-
-    const padding = [0, 0];
-    const relPadding = padding.map(fontSizeScale);
-
     const ctx = canvas.getContext("2d");
-    if (ctx == null) return null;
+    if (ctx == null) return MonocolorNode(node, textHeight);
 
     const font = `${fontWeight} ${fontSize}px ${fontFace}`;
     ctx.font = font;
@@ -46,6 +29,7 @@ const SplitColorNode = (
     const text2 = text.slice(splitIndex);
 
     // each canvas is a 2D plane, we want to give it the minimum area
+    // the canvas clips the edges between nodes, not the node text
     const text1Width = ctx.measureText(text1).width;
     const text2Width = ctx.measureText(text2).width;
     const innerWidth = text1Width + text2Width;

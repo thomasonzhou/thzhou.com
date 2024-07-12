@@ -22,6 +22,6 @@ Open a new tab in [http://localhost:3000](http://localhost:3000/) to see the web
 - [x] Skill graph
 - [X] Loading screen -> Discord, Chrome Dino
 - [ ] Graph edges display connecting technologies on hover
-- [ ] Color nodes based on Github colors
+- [X] Color nodes based on language colors
 - [ ] External links to Github, linkedin and favorite sites
 
