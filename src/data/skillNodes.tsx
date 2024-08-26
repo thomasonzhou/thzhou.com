@@ -51,7 +51,7 @@ export const skillData: {
             id: 4,
             nodeVal: "PostgreSQL",
             colors: ["#336791"], //https://wiki.postgresql.org/wiki/Color_Palette
-            url: "https://www.postgresql.org/docs/current/tutorial.html",
+            url: "/python_postgresql",
             description: "(internship diagram) Consolidating R&D data",
         },
         {
@@ -59,7 +59,7 @@ export const skillData: {
             nodeVal: "Python",
             colors: ["#4584b6", "#ffde57"], //https://www.python.org/community/logos/
             splitIndex: 2,
-            url: "https://docs.python.org/3/tutorial/index.html",
+            url: "/python_postgresql",
             description: "(internship diagram) Consolidating R&D data",
         },
         {
@@ -86,7 +86,7 @@ export const skillData: {
         {
             id: 9,
             nodeVal: "Learn more",
-            colors: ["#DDDDDD"],
+            colors: ["#CCCCCC"],
             url: "/learn_more",
             newTab: false,
             description: "Hover to learn more, click to open a link",
@@ -94,7 +94,7 @@ export const skillData: {
         {
             id: 10,
             nodeVal: "Physics",
-            colors: ["#CCCCCC"],
+            colors: ["#777777"],
             url: "https://github.com/vasturiano/react-force-graph",
             description: "Try dragging a node around!",
         },

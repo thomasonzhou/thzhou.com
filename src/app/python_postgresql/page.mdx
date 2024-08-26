@@ -1,0 +1,82 @@
+import Mermaid from "@/components/mermaid";
+
+# How to decouple work for maintainable data centralization
+
+This is a part of my end of internship presentation at Wandercraft, explaining how to automate the flow of data from producers (experts) to consumers (people who want graphs).
+
+### Before
+
+<Mermaid chart={`
+flowchart LR
+        A(Logs) --> B
+        A --> J
+
+        subgraph expert
+            B(Analysis)
+        end
+
+        subgraph expert 2
+            J(Analysis 2)
+        end
+
+        B --> C
+        J --> C
+
+        subgraph AE[another engineer]
+            C(Extract data from analysis on a case by case basis) --> D(Graphs)
+        end
+        style AE color:red
+
+        D --> E(End Viewer)
+
+        subgraph "people who want graphs"
+            E
+        end
+`}/>
+
+Subject experts maintain analysis scripts in C++ and Python. 
+
+A developer who does not necessarily have the same background must pull this data, create a graph manually, and respond to all changes from the data producer and consumer sides.
+
+### After
+
+<Mermaid chart={`
+flowchart LR
+        A(Logs) --> B
+        A --> J
+
+        subgraph expert
+            B(Analysis) --> C(Push data from analysis)
+        end
+
+        subgraph expert 2
+            J(Analysis 2) --> K(Push data from analysis)
+        end
+
+        C-->D
+        K-->D
+
+        subgraph TNT[The New Tool]
+            D(FastAPI endpoint) --> E(SQLAlchemy ORM) -->F[(PostgreSQL)]
+        end
+        style TNT color:green
+
+        F --> G
+
+        subgraph people who want graphs
+             G(Graphs in Superset)--> H(End Viewer)
+        end
+`}/>
+
+Subject experts define the structure of data they will provide as a <u>[Pydantic schema](https://docs.pydantic.dev/latest/why/)</u>.
+They guarantee the data they produce is truthful and up to date.
+
+A table matching the schema is automatically created in a PostgreSQL database if it doesn't already exist.
+
+Every time subject experts update their analysis (e.g. to use a method that is more accurate), they push data to update existing data or insert new data. Updating data only happens when all immutable metadata matches, such as timestamps and data types. 
+
+Data consumers create the graphs they need using SQL queries and existing templates in Apache Superset.
+
+([Click here to go back](/))
+
+
