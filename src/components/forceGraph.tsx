@@ -1,5 +1,5 @@
 "use client";
-import { skillData, node, link } from "@/data/skillNodes";
+import { skillData, node, link } from "@/data/nodes";
 import { ForceGraph3D } from "react-force-graph";
 import SplitColorNode from "./splitColorNode";
 import MonocolorNode from "./monocolorNode";

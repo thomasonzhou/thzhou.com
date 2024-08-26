@@ -1,7 +1,7 @@
 // modification of three-spritetext, adds 2 color split
 // fallback to monocolor
 import { SpriteMaterial, Sprite, CanvasTexture } from "three";
-import { node } from "@/data/skillNodes";
+import { node } from "@/data/nodes";
 import MonocolorNode from "@/components/monocolorNode";
 
 const SplitColorNode = (

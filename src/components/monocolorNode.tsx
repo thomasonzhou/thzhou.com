@@ -1,4 +1,4 @@
-import { node } from "@/data/skillNodes";
+import { node } from "@/data/nodes";
 import SpriteText from "three-spritetext";
 
 const MonocolorNode = (node: node, textheight: number) => {
