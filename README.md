@@ -21,7 +21,9 @@ Open a new tab in [http://localhost:3000](http://localhost:3000/) to see the web
 - [x] Clean up boilerplate
 - [x] Skill graph
 - [X] Loading screen -> Discord, Chrome Dino
+  - [ ] Improve loading screen
 - [X] Color nodes based on language colors
-- [X] External links to GitHub, Linkedin, and learning sites
-- [ ] Graph edges display connecting technologies on hover
+- [X] External links to GitHub, Linkedin
+- [X] More detailed information on node hover
+- [X] Graph edges display connecting technologies on hover
 

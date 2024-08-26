@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import React from "react";
 import Loading from "@/components/loading";
 
-const DynamicSkillGraph = dynamic(() => import("../components/skillGraph"), {
+const DynamicForceGraph = dynamic(() => import("../components/forceGraph"), {
     ssr: false,
     loading: () => <Loading />,
 });
@@ -11,7 +11,7 @@ const DynamicSkillGraph = dynamic(() => import("../components/skillGraph"), {
 export default function Home() {
     return (
         <main className="bg-black">
-            <DynamicSkillGraph />
+            <DynamicForceGraph />
         </main>
     );
 }
