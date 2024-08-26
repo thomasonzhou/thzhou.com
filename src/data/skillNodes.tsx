@@ -52,6 +52,7 @@ export const skillData: {
             nodeVal: "PostgreSQL",
             colors: ["#336791"], //https://wiki.postgresql.org/wiki/Color_Palette
             url: "/python_postgresql",
+            newTab: false,
             description: "(internship diagram) Consolidating R&D data",
         },
         {
@@ -60,6 +61,7 @@ export const skillData: {
             colors: ["#4584b6", "#ffde57"], //https://www.python.org/community/logos/
             splitIndex: 2,
             url: "/python_postgresql",
+            newTab: false,
             description: "(internship diagram) Consolidating R&D data",
         },
         {
