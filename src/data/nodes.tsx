@@ -38,7 +38,8 @@ export const skillData: {
             nodeVal: "Docker",
             colors: ["#1D63ED"], //https://www.docker.com/company/newsroom/media-resources/
             url: "/docker_presentation.pdf",
-            description: "(presentation) Docker - Why, what, and how",
+            description:
+                "(internship presentation) Docker - Why, what, and how",
         },
         {
             id: 3,
